@@ -10,25 +10,26 @@
             padding: 0;
             box-sizing: border-box;
         }
-        html, body {
-            height: 100%;
-            width: 100%;
-        }
         body {
             background: #000;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
         }
         .cover {
-            position: fixed;
-            top: 0;
-            left: 0;
             width: 100%;
-            height: 100%;
-            background-image: url('web_cover.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            z-index: 1;
+            max-width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .cover img {
+            width: 100%;
+            height: auto;
+            max-height: 100vh;
+            object-fit: contain;
         }
         .content {
             position: fixed;
@@ -63,7 +64,9 @@
     </style>
 </head>
 <body>
-    <div class="cover"></div>
+    <div class="cover">
+        <img src="web_cover.png" alt="Whale cover">
+    </div>
     <div class="content">
         <h1>Zero Inertia</h1>
         <a href="https://patricfitz.github.io/zero-inertia-demo/" class="btn">View the Demonstration</a>
